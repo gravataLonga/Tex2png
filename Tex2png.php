@@ -169,7 +169,7 @@ class Tex2png
      */
     protected function latexFile()
     {
-        $command = 'cd ' . $this->tmpDir . '; ' .Tex2png::LATEX . ' ' . . $this->hash . '.tex < /dev/null |grep ^!|grep -v Emergency > ' . $this->tmpDir . '/' .$this->hash . '.err 2> /dev/null 2>&1';
+        $command = 'cd ' . $this->tmpDir . '; ' .Tex2png::LATEX . ' ' . $this->hash . '.tex < /dev/null |grep ^!|grep -v Emergency > ' . $this->tmpDir . '/' .$this->hash . '.err 2> /dev/null 2>&1';
 
         shell_exec($command);
 
